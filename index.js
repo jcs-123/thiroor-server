@@ -32,6 +32,9 @@ const PORT = 4000 || process.env.PORT
 //listen
 churchServer.listen(PORT, ()=>{
     console.log(`Server is running successfully at PORT ${PORT}`);
+    
+   require('./backup');  
+    
 })
 
 churchServer.get('/', (req, res)=>{
